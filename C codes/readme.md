@@ -18,6 +18,7 @@ These methods are particularly useful for large, sparse, or structured matrices 
 | **gauss_seidel.c** | Implementation of the **Gauss–Seidel** method. |
 | **successive_over-relaxation.c** | Implementation of the **SOR (Successive Over-Relaxation)** method. |
 | **steepest_descent.c** | Implementation of the **Steepest Descent** method for SPD systems. |
+| **minimal_residual.c**| Implementation of **Minimal Residual (MINRES)** method -- converges for any symmetric matrix |
 | **conjugate_gradient.c** | Implementation of the **Conjugate Gradient (CG)** method — faster convergence for SPD matrices. |
 | **functions.c** | contains some helper functions (matrix–vector multiplication, vector dot product, etc.) used by iterative solvers. |
 | **funcs.h** | Header file containing function declarations. |
@@ -51,9 +52,13 @@ gcc -o sor successive_over-relaxation.c -lm
 gcc -o sd steepest_descent.c functions.c -lm
 ./sd
 ```
+### Minimal Residual
+```bash
+gcc -o minres minimal_residual.c functions.c -lm
+./minres
+```
 ### Conjugate Gradient
 ```
 gcc -o cg conjugate_gradient.c functions.c -lm
 ./cg
 ```
-
