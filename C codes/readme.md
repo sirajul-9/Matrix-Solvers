@@ -20,12 +20,14 @@ These methods are particularly useful for large, sparse, or structured matrices 
 | **steepest_descent.c** | Implementation of the **Steepest Descent** method for SPD systems. |
 | **minimal_residual.c**| Implementation of **Minimal Residual (MINRES)** method -- converges for any symmetric matrix |
 | **conjugate_gradient.c** | Implementation of the **Conjugate Gradient (CG)** method — faster convergence for SPD matrices. |
+| **bicgstab.c** | Implementation of the **Bi-Conjugate Gradient Stabilized (BiCGSTAB)** method — can be used for any non-singular matrix | 
 | **functions.c** | contains some helper functions (matrix–vector multiplication, vector dot product, etc.) used by iterative solvers. |
 | **funcs.h** | Header file containing function declarations. |
 | **mat.txt** | Input file containing the system matrix \(A\) (row-wise format). |
 | **vec.txt** | Input file containing the right-hand side vector \(b\). |
 | **sol.txt** | Output file storing the computed solution vector. |
 | **readme.md** | This documentation file. |
+
 
 ---
 
@@ -58,7 +60,12 @@ gcc -o minres minimal_residual.c functions.c -lm
 ./minres
 ```
 ### Conjugate Gradient
-```
+```bash
 gcc -o cg conjugate_gradient.c functions.c -lm
 ./cg
+```
+### Bi-conjugate Gradient Stabilized
+```bash
+gcc -o bicgstab bicgstab.c functions.c -lm
+./bicgstab
 ```
