@@ -3,7 +3,7 @@
 This repository contains C implementations of some of the classic **iterative methods** for solving linear systems of equations of the form:
 
 $$
-A x = b
+\textbf{A} x = b
 $$
 
 These methods are particularly useful for large, sparse, or structured matrices where direct solvers (like Gaussian elimination) become computationally expensive.
