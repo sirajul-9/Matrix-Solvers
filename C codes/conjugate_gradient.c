@@ -63,7 +63,7 @@ int main(){
         
         // Compute A*p and step size α = (r^Tr) / (p^T A p)
         mul_mat_vec(A,p,dum1,N);
-        alpha=mul_vec_vec(r,r,N)/mul_vec_vec(r,dum1,N);
+        alpha=mul_vec_vec(r,r,N)/mul_vec_vec(p,dum1,N);
         
         
         // x_{k+1} = x_k + alpha * p_k
